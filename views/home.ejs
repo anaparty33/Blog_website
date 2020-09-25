@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+  <h1>Home</h1>
+  <p><%=homeContent%></p>
+<% addposted.forEach(function(element)
+{
+  var str=element.Post
+  var truncString=str.substring(0,100)%>
+  <h1><%=element.Title%></h1>
+  <p ><%=truncString +"..."%><a href="/posts/+<%=element.Title%>">Readmore</a></p>
+<%} );%>
+
+
+
+<%- include('partials/footer'); -%>
